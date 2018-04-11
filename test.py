@@ -14,19 +14,13 @@ for item in parts:
     try:
         float(item)
         isnum.append(True)
+        nums.append(float(item))
     except:
         isnum.append(False)
 
-for it in parts:
-    try:
-        float(it)
-        nums.append(float(it))
-    except:
-        pass
-
 # JUDJING
 if len(nums) != 2:
-    print("FAIL - Wrong output string -not enaught numbers")
+    print("FAIL - Wrong output string - not enought numbers")
     quit()
 
 if nums[0] == solution[0] and nums[1] == solution[1]:
