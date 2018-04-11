@@ -1,4 +1,5 @@
-string = "zaplati  Pepa  za 1000.0 piv 10 korun."
+string = input()
+# string = "zaplati  Pepa  za 1000.0 piv 10 korun."
 parts = string.split()
 isnum = list()
 nums = list()
