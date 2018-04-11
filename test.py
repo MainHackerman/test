@@ -19,6 +19,11 @@ for item in parts:
         isnum.append(False)
 
 # JUDJING
+if correct_name:
+    print("PASS - Name of group leader in output string")
+else:
+    print("FAIL - Name of group leader NOT in output string")
+
 if len(nums) != 2:
     print("FAIL - Wrong output string - not enought numbers")
     quit()
@@ -30,5 +35,7 @@ elif nums[0] == solution[1] and nums[1] == solution[0]:
 else:
     correct = False
 
-print(correct)
-print(correct_name)
+if correct:
+    print("PASS - Numeric solution is correct")
+else:
+    print("FAIL - Wrong numeric solution")
