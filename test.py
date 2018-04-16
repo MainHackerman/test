@@ -32,25 +32,17 @@ CreateDataSet(test_val)
 lst = GetResults()
 ClearEnv()
 
-name = "Pepa"
 solution = [1000.0, 10.0]
-correct = bool()
-correct_name = False
-isnum = list()
 nums = list()
 
 for item in lst:
-    if item == name:
-        correct_name = True
     try:
-        float(item)
-        isnum.append(True)
         nums.append(float(item))
     except:
-        isnum.append(False)
+        pass
 
 # JUDJING
-if correct_name:
+if test_val[-1] in lst:
     print("PASS - Name of group leader in output string")
 else:
     print("FAIL - Name of group leader NOT in output string")
@@ -59,14 +51,7 @@ if len(nums) != 2:
     print("FAIL - Wrong output string - not enought numbers")
     quit()
 
-if nums[0] == solution[0] and nums[1] == solution[1]:
-    correct = True
-elif nums[0] == solution[1] and nums[1] == solution[0]:
-    correct = True
-else:
-    correct = False
-
-if correct:
+if (nums[0] == solution[0] and nums[1] == solution[1]) or (nums[0] == solution[1] and nums[1] == solution[0]):
     print("PASS - Numeric solution is correct")
 else:
     print("FAIL - Wrong numeric solution")
