@@ -1,15 +1,45 @@
-string = input()
-# string = "zaplati  Pepa  za 1000.0 piv 10 korun."
-parts = string.split()
-isnum = list()
-nums = list()
+import os
+
+def CreateDataSet(list):
+    os.system('touch test_values')
+    os.system('rm test_values')
+    os.system('touch test_values')
+    try:
+        file = open('test_values')
+        file.close()
+    except:
+        print('Cannot create file for test values - exiting test.')
+        quit()
+
+    for item in list:
+        os.system("echo " + str(item) + " >> test_values")
+
+
+def GetResults():
+    os.system('python3 project.py < test_values > test')
+    file = open('test')
+    string = file.read()
+    file.close()
+    return string.split()
+
+
+def ClearEnv():
+    os.system('rm test')
+    os.system('rm test_values')
+
+test_val = [10, 100, 0, 100, 'Pepa']
+CreateDataSet(test_val)
+lst = GetResults()
+ClearEnv()
 
 name = "Pepa"
 solution = [1000.0, 10.0]
 correct = bool()
 correct_name = False
+isnum = list()
+nums = list()
 
-for item in parts:
+for item in lst:
     if item == name:
         correct_name = True
     try:
