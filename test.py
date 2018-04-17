@@ -27,6 +27,7 @@ def ClearEnv():
     os.system('rm test')
     os.system('rm test_values')
 
+os.system('rlJournalStart')
 test_val = [10, 100, 0, 100, 'Pepa']
 CreateDataSet(test_val)
 lst = GetResults()
@@ -55,3 +56,5 @@ if (nums[0] == solution[0] and nums[1] == solution[1]) or (nums[0] == solution[1
     os.system('rlPass "Numeric solution is correct"')
 else:
     os.system('rlFail "Wrong numeric solution"')
+
+os.system('rlJournalEnd'
