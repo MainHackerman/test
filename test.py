@@ -43,15 +43,15 @@ for item in lst:
 
 # JUDJING
 if test_val[-1] in lst:
-    print("PASS - Name of group leader in output string")
+    os.system('rlPass "Name of group leader in output string"')
 else:
-    print("FAIL - Name of group leader NOT in output string")
+    os.system('rlFail "Name of group leader NOT in output string"')
 
 if len(nums) != 2:
-    print("FAIL - Wrong output string - not enought numbers")
+    os.system('rlFail "Wrong output string - not enought numbers"')
     quit()
 
 if (nums[0] == solution[0] and nums[1] == solution[1]) or (nums[0] == solution[1] and nums[1] == solution[0]):
-    print("PASS - Numeric solution is correct")
+    os.system('rlPass "Numeric solution is correct"')
 else:
-    print("FAIL - Wrong numeric solution")
+    os.system('rlFail "Wrong numeric solution"')
