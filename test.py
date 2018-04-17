@@ -57,4 +57,4 @@ if (nums[0] == solution[0] and nums[1] == solution[1]) or (nums[0] == solution[1
 else:
     os.system('rlFail "Wrong numeric solution"')
 
-os.system('rlJournalEnd'
+os.system('rlJournalEnd')
